@@ -71,6 +71,11 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = HTMLString;
 }
 
+function randomBackgroundColor() {
+  let body = document.getElementsByTagName("body")[0];
+  body.style.backgroundColor = `rgb(${((Math.random() * 255) + 1)}, ${((Math.random() * 255) + 1)}, ${((Math.random() * 255) + 1)})`;
+}
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
