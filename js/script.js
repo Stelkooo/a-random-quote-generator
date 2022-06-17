@@ -77,6 +77,7 @@ function randomBackgroundColor() {
   body.style.backgroundColor = `rgb(${((Math.random() * 255) + 1)}, ${((Math.random() * 255) + 1)}, ${((Math.random() * 255) + 1)})`;
 }
 
+setInterval(printQuote, 10000);
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
