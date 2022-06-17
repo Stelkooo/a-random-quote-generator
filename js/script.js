@@ -60,10 +60,10 @@ function printQuote() {
     HTMLString += `<span class="year">${rdmQuote.year}</span> `;
   };
   HTMLString += `</p>`
+  document.getElementById('quote-box').innerHTML = HTMLString; 
   return HTMLString;
 }
 
-document.getElementById('quote-box').innerHTML = printQuote(); 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
