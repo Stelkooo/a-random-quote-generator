@@ -49,8 +49,19 @@ function getRandomQuote() {
 /***
  * `printQuote` function
 ***/
-
-
+function printQuote() {
+  let rdmQuote = getRandomQuote();
+  let HTMLString = `<p class="quote">${rdmQuote.quote}</p>
+  <p class="source">${rdmQuote.source}`;
+  if (rdmQuote.citation) {
+    HTMLString += `<span class="citation">${rdmQuote.citation}</span> `;
+  };
+  if (rdmQuote.year) {
+    HTMLString += `<span class="year">${rdmQuote.year}</span> `;
+  };
+  HTMLString += `</p>`
+  return HTMLString;
+}
 
 /***
  * click event listener for the print quote button
