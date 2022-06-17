@@ -68,8 +68,7 @@ function printQuote() {
     HTMLString += `<span class="episode">${rdmQuote.episode}</span> `;
   };
   HTMLString += `</p>`;
-  document.getElementById('quote-box').innerHTML = HTMLString; 
-  return HTMLString;
+  document.getElementById('quote-box').innerHTML = HTMLString;
 }
 
 /***
