@@ -3,10 +3,6 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
 /*** 
  * `quotes` array 
 ***/
@@ -46,6 +42,7 @@ let quotes = [
 
 /***
  * `getRandomQuote` function
+ * return a random quote from the quotes arr
 ***/
 function getRandomQuote() {
   return quotes[Math.floor((Math.random() * quotes.length))];
@@ -53,6 +50,7 @@ function getRandomQuote() {
 
 /***
  * `printQuote` function
+ * changes the quote-box HTML id with a new quote
 ***/
 function printQuote() {
   let rdmQuote = getRandomQuote();
@@ -72,15 +70,21 @@ function printQuote() {
   randomBackgroundColor();
 }
 
+/***
+ * `randomBackgroundColor` function
+ * changes the body background with a random color
+***/
 function randomBackgroundColor() {
   let body = document.getElementsByTagName("body")[0];
   body.style.backgroundColor = `rgb(${((Math.random() * 255) + 1)}, ${((Math.random() * 255) + 1)}, ${((Math.random() * 255) + 1)})`;
 }
 
+/***
+ * changes the quote displayed every 10 seconds
+***/
 setInterval(printQuote, 10000);
+
 /***
  * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
 ***/
-
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
