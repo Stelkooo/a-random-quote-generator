@@ -63,6 +63,7 @@ function printQuote() {
   return HTMLString;
 }
 
+document.getElementById('quote-box').innerHTML = printQuote(); 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
