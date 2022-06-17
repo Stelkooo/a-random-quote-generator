@@ -64,7 +64,10 @@ function printQuote() {
   if (rdmQuote.year) {
     HTMLString += `<span class="year">${rdmQuote.year}</span> `;
   };
-  HTMLString += `</p>`
+  if (rdmQuote.episode) {
+    HTMLString += `<span class="episode">${rdmQuote.episode}</span> `;
+  };
+  HTMLString += `</p>`;
   document.getElementById('quote-box').innerHTML = HTMLString; 
   return HTMLString;
 }
